@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+
+		<!--    METAS   -->
+		<meta charset="UTF-8">
+		<meta name="viewport"
+		      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<!--    END METAS   -->
+
+		<title>KRP Clinical Consultants LTD</title>
+
+		<!--		STYLES    -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+		<link rel="stylesheet" href="./assets/style.css">
+		<!--		END STYLES    -->
+
+	</head>
+
+	<body>
+
+	<!--    MODAL   -->
+		<div id="modal_screen">
+			<div id="modal">
+				<div id="modal_header">
+					<p>GET QUOTE</p>
+					<p id="close" class="close pointer">&times;</p>
+				</div>
+				<form method="post">
+					<div class="form-group form-floating">
+						<input name="name" type="text" class="form-control" id="form_name" placeholder="Name" required/>
+						<label for="form_name">Name</label>
+					</div>
+					<div class="form-group form-floating">
+						<input name="phonenumber" type="number" class="form-control" id="form_phone_number" placeholder="Phone Number" required />
+						<label for="form_phone_number">Phone Number</label>
+					</div>
+					<div class="form-group form-floating">
+						<input name="email" type="email" class="form-control" id="form_email" aria-describedby="emailHelp" placeholder="Email"  required/>
+						<label for="form_email">Email *</label>
+						<small id="emailHelp" class="form-text text-muted">* Valid email address required.</small>
+					</div>
+					<div class="form-group">
+						<label for="form_textarea">How can we help you ?</label>
+						<textarea class="form-control" name="form_textarea" id="form_textarea" minlength="0" maxlength="1000" cols="5" rows="4" required placeholder="I was wondering about availability and rates. I need help with the following:"></textarea>
+						<small id="form_textareaHelp" class="form-text text-muted">0/1000</small>
+					</div>
+					<div id="form_submit_div">
+						<button type="submit" id="form_submit" class="pointer impButton">Submit</button>
+					</div>
+				</form>
+
+			</div>
+		</div>
+		<!--    END MODAL   -->
+
+
+		<!--    BASE MARKUP   -->
+		<nav id="body_navbar" class="navbar-fixed-top body_navbar">
+
+			<div id="body_heading">
+				<img id="site_logo" src="./assets/site_logo.jpg" alt="site_logo">
+				<h1 id="site_heading">KRP CLINICAL CONSULTANTS LTD</h1>
+			</div>
+
+			<div id="site_actionsList">
+					<div id="getQuoteNav" class="site_actionList_action pointer" >
+						<span class="material-icons site_action_icon">email</span>
+						<span>Get Quote</span>
+					</div>
+
+				<a href="tel:+447718990903" target="_blank">
+					<div class="site_actionList_action pointer">
+						<span class="material-icons site_action_icon">call</span>
+						<span>Call Now</span>
+					</div>
+				</a>
+
+				<a
+					href="https://www.google.com/maps/place/KRP+CLINICAL+CONSULTANTS+LTD/@51.60725,-0.3371186,15.23z/data=!4m5!3m4!1s0x487615d3da8c8cbd:0xe4d9ddf451e7d87d!8m2!3d51.6075198!4d-0.3301506"
+					target="_blank"
+				>
+					<div class="site_actionList_action pointer">
+						<span class="material-icons site_action_icon">directions</span>
+						<span>Get Directions</span>
+					</div>
+				</a>
+			</div>
+
+			<div id="nav_toggle" onclick="openNav()">
+				<span class="material-icons pointer">menu</span>
+			</div>
+
+			<!--  SIDEBAR NAV  -->
+			<div id="nav_sidebar">
+				<div id="closeSideNav" class="pointer">
+					<a href="javascript:void(0)" onclick="closeNav()">&times;</a>
+				</div>
+				<div id="getQuoteSideNav" class="site_actionList_action pointer" >
+					<span class="material-icons site_action_icon">email</span>
+					<span>Get Quote</span>
+				</div>
+
+				<div class="site_actionList_action pointer">
+					<a href="tel:+447718990903" target="_blank">
+						<div>
+							<span class="material-icons site_action_icon">call</span>
+							<span>Call Now</span>
+						</div>
+					</a>
+				</div>
+
+				<div class="site_actionList_action pointer">
+					<a
+						href="https://www.google.com/maps/place/KRP+CLINICAL+CONSULTANTS+LTD/@51.60725,-0.3371186,15.23z/data=!4m5!3m4!1s0x487615d3da8c8cbd:0xe4d9ddf451e7d87d!8m2!3d51.6075198!4d-0.3301506"
+						target="_blank"
+					>
+						<div>
+							<span class="material-icons site_action_icon">directions</span>
+							<span>Get Directions</span>
+						</div>
+					</a>
+				</div>
+			</div>
+			<!--  END SIDEBAR NAV  -->
+
+		</nav>
+
+		<div id="site_info_container">
+			<div id="site_info_text">
+				<h2>Clinical Research Consultants</h2>
+				<p>Quality - Value - Efficiency</p>
+				<button id="getQuoteButton" class="pointer impButton">GET QUOTE</button>
+			</div>
+			<img id="site_info_bg" src="./assets/site_info_bg.jpg" alt="image" />
+		</div>
+
+		<div id="site_aboutUs">
+			<div class="site_imp_heading"><h2>ABOUT US</h2></div>
+			<p>KRP Clinical Consultants Limited is an independent consultancy which provides a range of services in the UK and India.  We offer complete range of clinical development and consulting services to the pharmaceutical, biotechnology and medical device companies. We focus on providing cost-effective services with industry leading benchmarks in both quality and timeline.</p>
+			<p>We have years of experience and expertise in research as well as a passion for science and providing quality solutions. We enjoy an enviable reputation from our satisfied clients.  We provide staffing support for your trial management and monitoring services in the UK, Europe, North America and India. </p>
+			<p>What we can offer you:</p>
+				<ul>
+					<li>Program and Project Oversight and Management</li>
+					<li>CRO Selection and Management</li>
+					<li>Vendor Selection and Management</li>
+					<li>Interim Clinical Operation Lead</li>
+					<li>Interim Project Management Lead</li>
+					<li>Management of Clinical Trials Team</li>
+					<li>Clinical Trials Start-up Services</li>
+					<li>Monitoring Services</li>
+					<li>Regulatory Affairs Services</li>
+					<li>Data Entry Services</li>
+					<li>Patient Recruitment</li>
+					<li>Clinical Trials Staffing Support</li>
+				</ul>
+			<p>Call for a discussion or WhatsApp us about your requirements on <a href="tel:+447718990903" target="_blank">+44 7718990903</a></p>
+			<p>So wherever you require support for your clinical trials, we provide solutions.  And where we can’t, we will recommend to you people as good!</p>
+			<b>KRP CLINICAL CONSULTANTS LIMITED UK COMPANY REG 08993069</b>
+
+		</div>
+
+		<div id="site_findUs">
+			<div class="site_imp_heading"><h2>FIND US</h2></div>
+			<div id="map_div">
+				<a
+					href="https://www.google.com/maps/place/KRP+CLINICAL+CONSULTANTS+LTD/@51.60725,-0.3371186,15.23z/data=!4m5!3m4!1s0x487615d3da8c8cbd:0xe4d9ddf451e7d87d!8m2!3d51.6075198!4d-0.3301506"
+					target="_blank"
+				>
+					<img id="map" src="./assets/site_location.jpg" alt="map" />
+				</a>
+			</div>
+		</div>
+
+		<footer id="footer">
+			<div id="footer_options">
+				<div class="footer_option">
+					<p>
+						<b>Contact</b><br>
+						<a href="tel:+447718990903" target="_blank">+44 7718990903</a>
+					</p>
+				</div>
+
+				<div class="footer_option">
+					<p>
+						<b>Address</b><br>
+						11 Laurel Park<br>
+						Harrow<br>
+						HA3 6AU<br>
+						United Kingdom<br>
+					</p>
+				</div>
+
+				<div class="footer_option">
+					<p>
+						<b>Business Hours</b><br>
+						Monday - Friday : 08:00 AM - 06:00 PM<br>
+						Saturday : 12:00 PM - 06:00 PM<br>
+						Sunday : 12:00 PM - 04:00 PM<br>
+					</p>
+				</div>
+			</div>
+
+			<div id="dev_info" style="display: block; text-align: end; padding: 1rem">
+				<p style="color: grey;">Developed and Designed by <a href="https://www.linkedin.com/in/jinil-thakkar-95a64919a/" target="_blank">Jinil Thakkar</a></p>
+			</div>
+		</footer>
+	<!--    END BASE MARKUP   -->
+
+	<!-- SCRIPTS	-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<script src="./assets/script.js"></script>
+	<!-- END SCRIPTS	-->
+
+	</body>
+
+</html>
